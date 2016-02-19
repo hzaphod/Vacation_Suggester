@@ -34,17 +34,25 @@ $(document).ready(function() {
             }
           });
 
+          if ($Maui >= 3) {
+            $('#Maui').show();
+          }
+          if ($Austin >= 3) {
+            $('#Austin').show();
+          }
+          if ($Reykjavik >= 3) {
+            $('#Reykjavik').show();
+          }
+          //The result is then displayed via the branching method along with an image of the winning destination
 
 
           console.log($Maui);
           console.log($Austin);
           console.log($Reykjavik);
 
-        })
+        });
 
 
-
-          //The result is then displayed via the branching method along with an image of the winning destination
 
 
 

@@ -2,3 +2,7 @@
 {
   white-space: nowrap;
 }
+
+.Results {
+  display: none;
+}
