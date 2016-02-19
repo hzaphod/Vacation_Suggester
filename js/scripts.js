@@ -14,7 +14,7 @@ $(document).ready(function() {
         $('#mySubmit').click(function() {
           var $Maui =0;
           var $Austin =0;
-          var $Reykjevic =0;
+          var $Reykjavic =0;
 
           $('input:radio').each(function() {
             if($(this).is(':checked')) {
@@ -26,7 +26,7 @@ $(document).ready(function() {
                 $Austin++;
               }
               if($(this).val()=="c"){
-                $Reykjevic++;
+                $Reykjavic++;
               }
             }
             else {
@@ -35,10 +35,10 @@ $(document).ready(function() {
           });
 
 
-          
+
           console.log($Maui);
           console.log($Austin);
-          console.log($Reykjevic);
+          console.log($Reykjavic);
 
         })
 
