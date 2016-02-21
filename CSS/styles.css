@@ -1,3 +1,9 @@
+.container {
+  background-color: #90C3D4;
+  border: 40px groove purple;
+  margin: 40px;
+}
+
 .radio
 {
   white-space: nowrap;
@@ -5,4 +11,23 @@
 
 .Results {
   display: none;
+}
+
+h1 {
+  text-align: center;
+  margin: 40px;
+}
+
+#mySubmit {
+  border: 10px solid black;
+  margin: 10px;
+}
+
+#myReset {
+  border: 10px solid black;
+  margin: 10px;
+}
+
+h4 {
+  margin: 20px;
 }

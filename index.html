@@ -12,7 +12,7 @@
     <div class="container">
       <h1>Where Should You Go On Vacation?</h1>
       <div class="questions" id='theQuestions'>
-      <form action="" method="post">
+      <form action="" method="post" id="myForm">
 
 
         <h4>1.  What do you prefer to pack in your suitcase while getting ready to go on vacation?</h4>
@@ -20,7 +20,7 @@
           <ul>
             <li><input type="radio" name="q1" value="a"> Bathing suit and sunglasses</li>
             <li><input type="radio" name="q1" value="b"> A plaid shirt and some cowboy boots</li>
-            <li><input type="radio" name="q1" value="c"> Binoculars and your warmest winter coat</li>
+            <li><input type="radio" name="q1" value="c"> Binoculars and your <strong>warmest</strong> winter coat</li>
           </ul>
 
         <h4>2. What is your favorite type of vacation weather?</h4>
@@ -47,7 +47,7 @@
             <li><input type="radio" name="q4" value="c"> Don’t care. The longer the better. It’s all part of the fun!</li>
           </ul>
 
-        <h4>5. What do you like least about where you live currently?</h4>
+        <h4>5. What do you like <em>least</em> about where you live currently?</h4>
 
           <ul>
             <li><input type="radio" name="q5" value="a"> No ocean, no sun!</li>
@@ -82,7 +82,11 @@
         </div>
       </div>
 
+      <div>
+        <input type="button" id="myReset" value="reset">
+      </div>
+
 
     </div>
-</body>
+  </body>
 </html>

@@ -29,9 +29,6 @@ $(document).ready(function() {
                 $Reykjavik++;
               }
             }
-            else {
-              // Or an unchecked one here...
-            }
           });
 
           if ($Maui >= 3) {
@@ -43,6 +40,13 @@ $(document).ready(function() {
           if ($Reykjavik >= 3) {
             $('#Reykjavik').show();
           }
+
+          $('#myReset').click(function() {
+            $('#myForm').trigger('reset');
+            $('#Maui').hide();
+            $('#Austin').hide();
+            $('#Reykjavik').hide();
+          });
           //The result is then displayed via the branching method along with an image of the winning destination
 
 
