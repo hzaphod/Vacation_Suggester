@@ -1,20 +1,10 @@
 $(document).ready(function() {
 
-  //User is presented with 5 questions, and each question has a selection of 3 multiple choice radio button (?) answers
-
-    //Each answer button should be relative to A, B, or C as a position
-
-
-      //When one button/answer is selected, the answer is stored
-
-
-
-        //A tally and comparison of total A B and C answers leads to one being the winner (logic: in 5 questions, the most spread out results would end up having at least one position selected twice)
-
         $('#mySubmit').click(function() {
           var $Maui =0;
           var $Austin =0;
           var $Reykjavik =0;
+          hideEverything();
 
           $('input:radio').each(function() {
             if($(this).is(':checked')) {
@@ -31,8 +21,6 @@ $(document).ready(function() {
             }
           });
 
-          // figure out which results to show.
-
           if($Maui==2&&$Austin==2){
             showCongrats2Locations("Maui","Austin");
             $('#Maui').show();
@@ -43,7 +31,7 @@ $(document).ready(function() {
             $('#Maui').show();
             $('#Reykjavik').show();
           }
-          else if($Austin==2&&$Reykjavik==2){
+          else if($Reykjavik==2&&$Austin==2){
             showCongrats2Locations("Reykjavik","Austin");
             $('#Reykjavik').show();
             $('#Austin').show();
@@ -63,12 +51,8 @@ $(document).ready(function() {
 
           $('#myReset').click(function() {
             $('#myForm').trigger('reset');
-            $('#Maui').hide();
-            $('#Austin').hide();
-            $('#Reykjavik').hide();
-            $('#congrats').hide();
+            hideEverything();
           });
-          //The result is then displayed via the branching method along with an image of the winning destination
 
 
           console.log($Maui);
@@ -78,14 +62,14 @@ $(document).ready(function() {
         });
 
 
-
-
-
-
-  //After the quiz is done, there is a button to reset/start again
-
-
 });
+
+function hideEverything() {
+  $('#Maui').hide();
+  $('#Austin').hide();
+  $('#Reykjavik').hide();
+  $('#congrats').hide();
+}
 
 function showCongrats1Location($location) {
   $('#congrats').html('<h5>Congratulations! Based off your answers, you’d be well advised to pack your bags and book a flight for '+$location+'! Have a fantastic vacation, don’t forget to take lots of pictures and send some postcards home.</h5>')
