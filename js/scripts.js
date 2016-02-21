@@ -31,13 +31,33 @@ $(document).ready(function() {
             }
           });
 
-          if ($Maui >= 3) {
+          // figure out which results to show.
+
+          if($Maui==2&&$Austin==2){
+            showCongrats2Locations("Maui","Austin");
             $('#Maui').show();
-          }
-          if ($Austin >= 3) {
             $('#Austin').show();
           }
-          if ($Reykjavik >= 3) {
+          else if($Maui==2&&$Reykjavik==2){
+            showCongrats2Locations("Maui","Reykjavik");
+            $('#Maui').show();
+            $('#Reykjavik').show();
+          }
+          else if($Austin==2&&$Reykjavik==2){
+            showCongrats2Locations("Reykjavik","Austin");
+            $('#Reykjavik').show();
+            $('#Austin').show();
+          }
+          else if ($Maui >= 3) {
+            showCongrats1Location("Maui");
+            $('#Maui').show();
+          }
+          else if ($Austin >= 3) {
+            showCongrats1Location("Austin");
+            $('#Austin').show();
+          }
+          else if ($Reykjavik >= 3) {
+            showCongrats1Location("Reykjavik");
             $('#Reykjavik').show();
           }
 
@@ -46,6 +66,7 @@ $(document).ready(function() {
             $('#Maui').hide();
             $('#Austin').hide();
             $('#Reykjavik').hide();
+            $('#congrats').hide();
           });
           //The result is then displayed via the branching method along with an image of the winning destination
 
@@ -65,3 +86,13 @@ $(document).ready(function() {
 
 
 });
+
+function showCongrats1Location($location) {
+  $('#congrats').html('<h5>Congratulations! Based off your answers, you’d be well advised to pack your bags and book a flight for '+$location+'! Have a fantastic vacation, don’t forget to take lots of pictures and send some postcards home.</h5>')
+  $('#congrats').show();
+}
+
+function showCongrats2Locations($location1,$location2) {
+  $('#congrats').html('<h5>Congratulations! Based off your answers, you’d be well advised to toss a coin and pack your bags for '+$location1+' or '+$location2+'! Have a fantastic vacation, don’t forget to take lots of pictures and send some postcards home.</h5>')
+  $('#congrats').show();
+}
